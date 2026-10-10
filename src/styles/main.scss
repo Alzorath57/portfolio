@@ -1,0 +1,21 @@
+@use "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  color: variables.$color-text;
+  background-color: variables.$color-background;
+  font-family: variables.$font-body;
+}
+
+h1,
+h2,
+h3 {
+  font-family: variables.$font-heading;
+}
