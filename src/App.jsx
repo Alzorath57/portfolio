@@ -1,7 +1,13 @@
 import "./App.css";
+import Header from "./components/Header/Header.jsx";
 
 function App() {
-  return <main></main>;
+  return (
+    <>
+      <Header />
+      <main></main>
+    </>
+  );
 }
 
 export default App;
