@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <header className="header">
-      <a href="#" className="header__logo">
+      <a href="#accueil" className="header__logo">
         J. Holtzinger
       </a>
       <button
