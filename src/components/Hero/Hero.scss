@@ -1,0 +1,93 @@
+@use "../../styles/variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 1.25rem;
+  align-items: flex-start;
+
+  &__photo {
+    width: 140px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__title,
+  &__subtitle,
+  &__text {
+    margin: 0;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-family: variables.$font-heading;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+  }
+
+  &__text {
+    color: variables.$color-secondary;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.7rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    border: 2px solid variables.$color-accent;
+    text-decoration: none;
+
+    &--primary {
+      background: variables.$color-accent;
+      color: variables.$color-background;
+    }
+
+    &--secondary {
+      color: variables.$color-accent;
+    }
+
+    &:hover,
+    &:focus-visible {
+      opacity: 80%;
+    }
+  }
+}
+
+@media (min-width: variables.$breakpoint-desktop) {
+  .hero {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 5rem 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__photo {
+      width: 320px;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
