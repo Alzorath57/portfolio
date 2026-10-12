@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-labelledby="titre">
+  <title id="titre">Une baguette, un épi de blé et une fenêtre de code</title>
+
+  <!-- Fond : halo doux couleur accent -->
+  <circle cx="240" cy="190" r="165" fill="#B5541C" opacity="0.08"/>
+
+  <!-- Fenêtre de code (terminal) -->
+  <g>
+    <rect x="250" y="44" width="186" height="136" rx="14" fill="#1F1A17"/>
+    <rect x="250" y="44" width="186" height="30" rx="14" fill="#3A322D"/>
+    <rect x="250" y="60" width="186" height="14" fill="#3A322D"/>
+    <circle cx="272" cy="59" r="5.5" fill="#B5541C"/>
+    <circle cx="291" cy="59" r="5.5" fill="#FAF7F2" opacity="0.55"/>
+    <circle cx="310" cy="59" r="5.5" fill="#FAF7F2" opacity="0.3"/>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+      <path d="M318 103 L294 127 L318 151" stroke="#FAF7F2"/>
+      <path d="M355 98 L333 156" stroke="#E08A4E"/>
+      <path d="M370 103 L394 127 L370 151" stroke="#FAF7F2"/>
+    </g>
+  </g>
+
+  <!-- Épi de blé -->
+  <g>
+    <path d="M120 300 C 122 245, 126 185, 136 98" fill="none" stroke="#C99A4E" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#D9AC5F" stroke="#B8893F" stroke-width="1.5">
+      <ellipse cx="137" cy="84" rx="8" ry="16"/>
+      <ellipse cx="124" cy="106" rx="8" ry="16" transform="rotate(-32 124 106)"/>
+      <ellipse cx="148" cy="108" rx="8" ry="16" transform="rotate(32 148 108)"/>
+      <ellipse cx="122" cy="132" rx="8" ry="16" transform="rotate(-32 122 132)"/>
+      <ellipse cx="146" cy="134" rx="8" ry="16" transform="rotate(32 146 134)"/>
+      <ellipse cx="120" cy="158" rx="8" ry="16" transform="rotate(-32 120 158)"/>
+      <ellipse cx="144" cy="160" rx="8" ry="16" transform="rotate(32 144 160)"/>
+      <ellipse cx="118" cy="184" rx="8" ry="16" transform="rotate(-32 118 184)"/>
+      <ellipse cx="142" cy="186" rx="8" ry="16" transform="rotate(32 142 186)"/>
+    </g>
+    <g stroke="#C99A4E" stroke-width="2" stroke-linecap="round">
+      <line x1="137" y1="68" x2="139" y2="40"/>
+      <line x1="118" y1="92" x2="104" y2="64"/>
+      <line x1="154" y1="94" x2="170" y2="66"/>
+      <line x1="116" y1="118" x2="98" y2="94"/>
+      <line x1="152" y1="120" x2="174" y2="96"/>
+    </g>
+  </g>
+
+  <!-- Ombre au sol -->
+  <ellipse cx="250" cy="318" rx="150" ry="9" fill="#1F1A17" opacity="0.08"/>
+
+  <!-- Baguette -->
+  <g transform="translate(262 262) rotate(-16)">
+    <path d="M-184 0 C -184 -19, -152 -32, -100 -32 L 100 -32 C 152 -32, 184 -19, 184 0 C 184 19, 152 32, 100 32 L -100 32 C -152 32, -184 19, -184 0 Z" fill="#B5541C"/>
+    <path d="M-174 -4 C -172 -18, -146 -27, -100 -27 L 100 -27 C 146 -27, 172 -18, 174 -4 C 140 -8, 100 -6, 0 -4 C -100 -6, -140 -8, -174 -4 Z" fill="#C9692F"/>
+    <g fill="#EBC48F">
+      <ellipse cx="-112" cy="-4" rx="24" ry="7" transform="rotate(-22 -112 -4)"/>
+      <ellipse cx="-56" cy="-4" rx="24" ry="7" transform="rotate(-22 -56 -4)"/>
+      <ellipse cx="0" cy="-4" rx="24" ry="7" transform="rotate(-22 0 -4)"/>
+      <ellipse cx="56" cy="-4" rx="24" ry="7" transform="rotate(-22 56 -4)"/>
+      <ellipse cx="112" cy="-4" rx="24" ry="7" transform="rotate(-22 112 -4)"/>
+    </g>
+  </g>
+</svg>
