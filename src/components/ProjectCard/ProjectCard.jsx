@@ -1,6 +1,6 @@
 import "./ProjectCard.scss";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, onOpen }) {
   return (
     <article className="project-card">
       <img
@@ -17,7 +17,7 @@ function ProjectCard({ project }) {
             </li>
           ))}
         </ul>
-        <button className="project-card__button" type="button">
+        <button className="project-card__button" type="button" onClick={onOpen}>
           Voir le détail
         </button>
       </div>
