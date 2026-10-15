@@ -13,6 +13,7 @@ import sophieBluelModaleAjoutRemplie from "../assets/images/sophie-bluel/sophie-
 
 import ninaCarducciLighthouseApres from "../assets/images/nina-carducci/nina-carducci-lighthouse-apres.webp";
 import ninaCarducciLighthouseAvant from "../assets/images/nina-carducci/nina-carducci-lighthouse-avant.webp";
+import ninaCarducciCover from "../assets/images/nina-carducci/nina-carducci-cover.webp";
 
 import menuMakerKanban from "../assets/images/menu-maker/menu-maker-kanban.webp";
 import menuMakerSpecifications from "../assets/images/menu-maker/menu-maker-specifications.webp";
@@ -101,7 +102,7 @@ const projects = [
     id: "nina-carducci",
     title: "Nina Carducci",
     category: "front",
-    cover: ninaCarducciLighthouseApres,
+    cover: ninaCarducciCover,
     images: [ninaCarducciLighthouseAvant, ninaCarducciLighthouseApres],
     context:
       "La photographe Nina Carducci avait un site lent et mal référencé. Ma mission : l'optimiser (performance, SEO, accessibilité) et livrer un rapport d'intervention.",
