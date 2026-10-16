@@ -14,7 +14,7 @@ function Contact() {
       <ul className="contact__links">
         <li className="contact__item">
           <a
-            href="https://www.linkedin.com/in/julien-holtzinger-312353173"
+            href="https://www.linkedin.com/in/julien-holtzinger"
             className="contact__link"
             target="_blank"
             rel="noopener noreferrer"
