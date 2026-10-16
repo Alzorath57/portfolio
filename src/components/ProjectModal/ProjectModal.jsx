@@ -32,17 +32,22 @@ function ProjectModal({ project, onClose }) {
             </li>
           ))}
         </ul>
-        <h3>Contexte</h3>
-        <p>{project.context}</p>
-        <h3>Ce que j'ai fait</h3>
-        <p>{project.tasks}</p>
-        <h3>Difficulté surmontée</h3>
-        <p>{project.challenge}</p>
-        <h3>Ce que j'ai appris</h3>
-        <p>{project.learned}</p>
+        <h3 className="project-modal__subtitle">Contexte</h3>
+        <p className="project-modal__text">{project.context}</p>
+        <h3 className="project-modal__subtitle">Ce que j'ai fait</h3>
+        <p className="project-modal__text">{project.tasks}</p>
+        <h3 className="project-modal__subtitle">Difficulté surmontée</h3>
+        <p className="project-modal__text">{project.challenge}</p>
+        <h3 className="project-modal__subtitle">Ce que j'ai appris</h3>
+        <p className="project-modal__text">{project.learned}</p>
 
         <div className="project-modal__links">
-          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-modal__link"
+          >
             Voir le code sur GitHub
           </a>
         </div>
