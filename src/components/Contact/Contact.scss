@@ -1,0 +1,71 @@
+@use "../../styles/variables";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 1.25rem;
+
+  &__title {
+    font-family: variables.$font-heading;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 65ch;
+  }
+
+  &__email {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    min-height: 44px;
+    padding: 0 1.25rem;
+    background: variables.$color-accent;
+    color: variables.$color-background;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.375rem;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 80%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 1.25rem;
+    border: 2px solid variables.$color-accent;
+    color: variables.$color-accent;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.375rem;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 80%;
+    }
+  }
+}
+
+@media (min-width: variables.$breakpoint-desktop) {
+  .contact {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
