@@ -22,6 +22,18 @@ function ProjectModal({ project, onClose }) {
           src={project.cover}
           alt={`Aperçu du site ${project.title}`}
         />
+        <ul className="project-modal__gallery">
+          {project.images.map((image, index) => (
+            <li key={image}>
+              <img
+                className="project-modal__thumb"
+                src={image}
+                alt={`Capture ${index + 1} du projet ${project.title}`}
+                loading="lazy"
+              />
+            </li>
+          ))}
+        </ul>
         <h2 className="project-modal__title" id="project-modal-title">
           {project.title}
         </h2>
