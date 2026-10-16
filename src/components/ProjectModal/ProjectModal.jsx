@@ -1,8 +1,36 @@
+import { useEffect, useRef } from "react";
 import "./ProjectModal.scss";
 
 function ProjectModal({ project, onClose }) {
+  const closeButtonRef = useRef(null);
+
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current.focus();
+
+    // Nettoyage à la fermeture : retire l'écouteur et rend le scroll à la page
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  // Ferme uniquement si le clic est sur le fond, pas à l'intérieur de la boîte
+  function handleOverlayClick(event) {
+    if (event.target === event.currentTarget) {
+      onClose();
+    }
+  }
+
   return (
-    <div className="project-modal">
+    <div className="project-modal" onClick={handleOverlayClick}>
       <div
         className="project-modal__content"
         role="dialog"
@@ -14,6 +42,7 @@ function ProjectModal({ project, onClose }) {
           onClick={onClose}
           aria-label="Fermer"
           type="button"
+          ref={closeButtonRef}
         >
           ✕
         </button>
