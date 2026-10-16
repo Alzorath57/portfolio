@@ -1,0 +1,69 @@
+@use "sass:color";
+@use "../../styles/variables";
+
+.journey {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 1.25rem;
+
+  &__title {
+    font-family: variables.$font-heading;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    list-style: none;
+    border-left: 2px solid color.change(variables.$color-accent, $alpha: 0.3);
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.3rem;
+      left: calc(-1.5rem - 7px);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: variables.$color-accent;
+      box-shadow: 0 0 0 4px variables.$color-background;
+    }
+  }
+
+  &__period {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: variables.$color-accent;
+  }
+
+  &__step {
+    margin: 0;
+    font-size: 1.125rem;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 65ch;
+    color: variables.$color-secondary;
+  }
+}
+
+@media (min-width: variables.$breakpoint-desktop) {
+  .journey {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
