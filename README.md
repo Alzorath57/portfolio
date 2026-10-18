@@ -1,16 +1,76 @@
-# React + Vite
+# Portfolio — Julien Holtzinger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site portfolio de développeur web présentant mes projets, mes compétences et mon parcours de reconversion, développé avec React, Vite et Sass.
 
-Currently, two official plugins are available:
+🔗 **Site en ligne : [julien-holtzinger.vercel.app](https://julien-holtzinger.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Aperçu du portfolio](public/og-image.png)
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** — composants, `useState`, `useEffect`, `useRef`
+- **Vite** — outil de build et serveur de développement
+- **Sass** — variables, imbrication, convention BEM, approche mobile-first
+- **Vercel** — hébergement et déploiement continu depuis la branche `main`
 
-## Expanding the ESLint configuration
+## Fonctionnalités
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Design responsive mobile-first (breakpoints à 768px et 1024px)
+- Navigation avec menu burger accessible sur mobile (`aria-expanded`, `aria-label`)
+- Cartes projets générées à partir de données centralisées (`src/data/`)
+- Modale projet accessible : fermeture avec Échap, clic sur l'overlay ou bouton, focus géré, défilement de la page bloqué
+- Images optimisées en WebP avec chargement différé (`loading="lazy"`)
+- SEO : balises meta, hiérarchie des titres, balises Open Graph pour le partage sur les réseaux sociaux
+
+## Qualité
+
+- **Lighthouse** : 100 en Performances, Accessibilité, Bonnes pratiques et SEO
+- **WAVE** : 0 erreur, 0 erreur de contraste
+- Navigation complète au clavier
+
+## Installation
+
+Prérequis : [Node.js](https://nodejs.org/) 20 ou plus.
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/Alzorath57/portfolio.git
+cd portfolio
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+npm run dev
+```
+
+Autres commandes :
+
+```bash
+npm run build     # Créer la version de production dans dist/
+npm run preview   # Prévisualiser la version de production
+```
+
+## Structure du projet
+
+```
+portfolio/
+├── public/              # Fichiers servis tels quels (favicon, image Open Graph)
+├── src/
+│   ├── assets/images/   # Captures des projets, photo, illustration
+│   ├── components/      # Un dossier par composant (.jsx + .scss)
+│   ├── data/            # Données des projets et des compétences
+│   ├── styles/          # Variables et styles globaux Sass
+│   ├── App.jsx
+│   └── main.jsx
+└── index.html
+```
+
+## Auteur
+
+**Julien Holtzinger** — Développeur web React / Node.js
+
+- [LinkedIn](https://www.linkedin.com/in/julien-holtzinger)
+- [GitHub](https://github.com/Alzorath57)
+
+Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms.
