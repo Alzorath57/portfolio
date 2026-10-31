@@ -17,7 +17,7 @@ function useReveal() {
           }
         });
       },
-      { threshold: 0.15 },
+      { threshold: 0.15, rootMargin: "0px 0px -20% 0px" },
     );
 
     observer.observe(element);
