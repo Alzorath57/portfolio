@@ -1,9 +1,16 @@
+import useReveal from "../../hooks/useReveal";
 import skills from "../../data/skills";
 import "./Skills.scss";
 
 function Skills() {
+  const [skillsRef, isVisible] = useReveal();
+
   return (
-    <section className="skills" id="competences">
+    <section
+      ref={skillsRef}
+      className={`skills${isVisible ? " is-visible" : ""}`}
+      id="competences"
+    >
       <h2 className="skills__title">Compétences</h2>
       <div className="skills__groups">
         {skills.map((group) => (
