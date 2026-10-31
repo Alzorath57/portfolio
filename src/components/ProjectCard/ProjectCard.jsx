@@ -1,8 +1,14 @@
+import useReveal from "../../hooks/useReveal";
 import "./ProjectCard.scss";
 
 function ProjectCard({ project, onOpen }) {
+  const [cardRef, isVisible] = useReveal();
+
   return (
-    <article className="project-card">
+    <article
+      ref={cardRef}
+      className={`project-card${isVisible ? " is-visible" : ""}`}
+    >
       <img
         className="project-card__image"
         src={project.cover}
